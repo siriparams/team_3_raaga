@@ -1,0 +1,13 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<body class="bg-[#0f0f0f] text-white flex items-center justify-center h-screen">
+    <form method="POST" class="bg-[#1a1a1a] p-10 rounded-3xl shadow-2xl w-96 border border-zinc-800">
+        <h2 class="text-3xl font-bold text-[#FFD700] mb-6 text-center">RAAGA</h2>
+        <input name="username" placeholder="Username" class="w-full p-4 mb-4 bg-zinc-900 rounded-xl outline-none border border-zinc-800" required>
+        <input name="password" type="password" placeholder="Password" class="w-full p-4 mb-6 bg-zinc-900 rounded-xl outline-none border border-zinc-800" required>
+        <button class="w-full bg-[#FFD700] text-black font-bold py-4 rounded-full hover:scale-105 transition">Submit</button>
+        <div class="mt-4 text-center text-sm text-zinc-500">
+            <a href="/signup" class="hover:text-[#FFD700]">Need an account? Signup</a> | 
+            <a href="/login" class="hover:text-[#FFD700]">Login</a>
+        </div>
+    </form>
+</body>

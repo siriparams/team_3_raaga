@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Raaga - {{ type }}</title>
+</head>
+<body class="bg-[#0f0f0f] text-white flex items-center justify-center h-screen font-sans">
+    <form method="POST" class="bg-[#1a1a1a] p-10 rounded-3xl w-96 border border-zinc-800 shadow-2xl">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-black text-[#FFD700] italic">RAAGA</h2>
+            <p class="text-zinc-500 text-sm mt-2">{{ type }} to your account</p>
+        </div>
+
+        <input name="username" placeholder="Username" required 
+               class="w-full p-4 mb-4 bg-zinc-900 border border-zinc-800 rounded-xl outline-none focus:border-[#FFD700] transition">
+        
+        <input name="password" type="password" placeholder="Password" required 
+               class="w-full p-4 mb-6 bg-zinc-900 border border-zinc-800 rounded-xl outline-none focus:border-[#FFD700] transition">
+        
+        <button class="w-full bg-[#FFD700] text-black font-bold py-4 rounded-full hover:scale-105 transition duration-300">
+            {{ type }}
+        </button>
+
+        <div class="mt-6 text-center text-sm text-zinc-500">
+            {% if type == 'Login' %}
+                Need an account? <a href="/signup" class="text-[#FFD700] font-bold">Sign up here</a>
+            {% else %}
+                Already have an account? <a href="/login" class="text-[#FFD700] font-bold">Login here</a>
+            {% endif %}
+        </div>
+    </form>
+</body>
+</html>
